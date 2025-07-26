@@ -1,0 +1,195 @@
+# ====================================================================
+# Repository-Level Analysis Prompts
+# ====================================================================
+# These prompts generate high-level summaries of entire repositories.
+# They're designed to provide different perspectives based on the audience.
+
+business_focused:
+  context: "Executive and business stakeholder analysis"
+  prompt: |
+    Analyze this COBOL repository from a BUSINESS PERSPECTIVE for executive decision-making.
+
+    Repository Information:
+    {summary_info}
+
+    Generate an executive summary in English that addresses:
+
+    ## BUSINESS VALUE ASSESSMENT
+    **What business processes does this system automate?**
+    - Core business functions supported
+    - Critical business workflows enabled
+    - Business rules and logic implemented
+
+    **What is the operational impact?**
+    - Daily/monthly transaction volumes (if identifiable)
+    - Business continuity dependencies
+    - Customer-facing vs. internal operations
+
+    ## STRATEGIC CONSIDERATIONS
+    **Business risks identified:**
+    - Operational dependencies and single points of failure
+    - Compliance and regulatory considerations
+    - Business continuity risks
+
+    **Improvement opportunities:**
+    - Process automation potential
+    - Customer experience enhancements
+    - Operational efficiency gains
+
+    ## EXECUTIVE RECOMMENDATIONS
+    **Immediate priorities (0-6 months):**
+    - Critical maintenance or risk mitigation needs
+    - Quick wins for operational improvement
+
+    **Strategic initiatives (6-18 months):**
+    - Modernization opportunities
+    - Digital transformation potential
+    - Integration with modern systems
+
+    **Investment considerations:**
+    - Estimated effort for major improvements
+    - ROI potential for modernization
+    - Resource requirements
+
+    Maximum 700 words. Use business language, avoid technical jargon, focus on impact and ROI.
+
+technical_focused:
+  context: "Developer and architect analysis"
+  prompt: |
+    Analyze this COBOL repository from a TECHNICAL PERSPECTIVE for development and architecture teams.
+
+    Repository Information:
+    {summary_info}
+
+    Generate a technical assessment in English covering:
+
+    ## SYSTEM ARCHITECTURE
+    **Component structure:**
+    - Program organization and modularity
+    - Data flow between components
+    - Integration patterns identified
+
+    **Design patterns and practices:**
+    - Coding standards adherence
+    - Architectural patterns observed
+    - Reusability and modularity assessment
+
+    ## CODE QUALITY ASSESSMENT
+    **Maintainability factors:**
+    - Code complexity analysis
+    - Documentation completeness
+    - Naming conventions and readability
+
+    **Technical debt identification:**
+    - Legacy code patterns requiring attention
+    - Hardcoded values and configuration issues
+    - Error handling and logging practices
+
+    ## TECHNOLOGY STACK
+    **Current technology usage:**
+    - COBOL version and compiler features used
+    - Database technologies and integration methods
+    - Middleware and integration technologies
+
+    **Dependencies and interfaces:**
+    - External system integrations
+    - File-based vs. database-driven operations
+    - Batch vs. online processing patterns
+
+    ## MODERNIZATION ROADMAP
+    **Short-term improvements (3-6 months):**
+    - Code quality enhancements
+    - Documentation improvements
+    - Testing framework implementation
+
+    **Medium-term modernization (6-18 months):**
+    - API development opportunities
+    - Database modernization possibilities
+    - Development tooling upgrades
+
+    **Long-term transformation (18+ months):**
+    - Platform migration strategies
+    - Microservices decomposition potential
+    - Cloud-native architecture evolution
+
+    **Technical recommendations:**
+    - Development best practices to implement
+    - Tools and frameworks to adopt
+    - Skills and training requirements
+
+    Maximum 800 words. Use technical terminology, provide specific recommendations, include effort estimates.
+
+comprehensive:
+  context: "Balanced analysis for mixed audiences"
+  prompt: |
+    Analyze this COBOL repository from an INTEGRATED BUSINESS AND TECHNICAL PERSPECTIVE.
+
+    Repository Information:
+    {summary_info}
+
+    Generate a comprehensive analysis in English that serves both business and technical stakeholders:
+
+    ## EXECUTIVE SUMMARY
+    **System overview:**
+    - Core business purpose and value proposition
+    - Critical business processes supported
+    - Technical architecture overview
+
+    **Key findings:**
+    - Most significant business and technical observations
+    - Primary risks and opportunities identified
+    - Strategic recommendations summary
+
+    ## BUSINESS PERSPECTIVE
+    **Operational impact:**
+    - Business processes automated by this system
+    - Dependencies and integration points
+    - Compliance and regulatory considerations
+
+    **Business value assessment:**
+    - Efficiency gains provided by the system
+    - Customer or user impact
+    - Business continuity importance
+
+    ## TECHNICAL PERSPECTIVE
+    **Architecture and design:**
+    - System structure and component organization
+    - Technology stack and integration patterns
+    - Code quality and maintainability assessment
+
+    **Technical health:**
+    - Current state of the codebase
+    - Technical debt and modernization needs
+    - Performance and scalability considerations
+
+    ## STRATEGIC RECOMMENDATIONS
+    **Immediate actions (0-6 months):**
+    - Critical fixes or improvements needed
+    - Quick wins for both business and technical teams
+
+    **Medium-term strategy (6-18 months):**
+    - Modernization initiatives with business impact
+    - Technology upgrades with operational benefits
+
+    **Long-term vision (18+ months):**
+    - Transformation opportunities
+    - Digital modernization roadmap
+    - Platform evolution strategy
+
+    ## IMPLEMENTATION GUIDANCE
+    **Resource requirements:**
+    - Skill sets needed for improvements
+    - Estimated effort for major initiatives
+    - Budget considerations for modernization
+
+    **Risk mitigation:**
+    - Steps to reduce operational risks
+    - Technical risk management strategies
+    - Change management considerations
+
+    **Success metrics:**
+    - KPIs for business value realization
+    - Technical quality measurements
+    - Progress tracking recommendations
+
+    Maximum 1000 words. Balance business impact with technical detail. Use clear section headers. Provide actionable recommendations with priorities.

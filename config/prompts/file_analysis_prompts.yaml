@@ -1,0 +1,139 @@
+# ====================================================================
+# External Prompt Definitions
+# ====================================================================
+# This YAML file contains all the prompts for analyzing individual files.
+# The structure allows for easy modification by domain experts who understand
+# COBOL but may not be programmers.
+
+# Context: Called by _analyze_single_file_sync() in analyzer.py
+# Purpose: Analyze individual COBOL program files
+
+cobol_analysis:
+  context: "Analyzing individual COBOL program files for business and technical insights"
+  prompt: |
+    Analyze this COBOL program file: {filename}
+    
+    Content:
+    {content}
+
+    Provide a comprehensive analysis in English (maximum 200 words) covering:
+    
+    **Business Purpose:**
+    - What business function does this program serve?
+    - What business processes does it support?
+    
+    **Technical Structure:**
+    - Key divisions and sections identified
+    - Main data structures and variables
+    - Processing logic overview
+    
+    **Integration Points:**
+    - Files or databases it reads/writes
+    - Other programs it calls or is called by
+    - External systems it interfaces with
+    
+    **Observations:**
+    - Code quality and maintainability notes
+    - Any patterns or concerns identified
+    
+    Format: Professional, structured response suitable for both technical and business stakeholders.
+
+copybook_analysis:
+  context: "Analyzing COBOL copybook files for data structure understanding"
+  prompt: |
+    Analyze this COBOL copybook: {filename}
+    
+    Content:
+    {content}
+
+    Provide a detailed analysis in English (maximum 180 words) covering:
+    
+    **Data Structure Purpose:**
+    - What type of data does this copybook define?
+    - What business entities or concepts does it represent?
+    
+    **Technical Details:**
+    - Key data fields and their purposes
+    - Data types and sizes
+    - Hierarchical structure (if applicable)
+    
+    **Usage Context:**
+    - How is this copybook likely used in programs?
+    - What programs or processes would include this?
+    - Database tables or files it might map to
+    
+    **Design Assessment:**
+    - Data design quality and normalization
+    - Potential modernization considerations
+    
+    Format: Clear, technical analysis suitable for developers and data architects.
+
+jcl_analysis:
+  context: "Analyzing JCL files for job execution understanding"
+  prompt: |
+    Analyze this JCL (Job Control Language) file: {filename}
+    
+    Content:
+    {content}
+
+    Provide a thorough analysis in English (maximum 180 words) covering:
+    
+    **Job Purpose:**
+    - What business process does this job execute?
+    - When and how frequently is it likely run?
+    
+    **Execution Flow:**
+    - Job steps and their sequence
+    - Programs executed in each step
+    - Dependencies between steps
+    
+    **Resource Management:**
+    - Input datasets and sources
+    - Output datasets and destinations
+    - System resources utilized
+    
+    **Operational Considerations:**
+    - Error handling and recovery procedures
+    - Performance implications
+    - Scheduling dependencies
+    
+    **Modernization Notes:**
+    - Potential automation opportunities
+    - Cloud migration considerations
+    
+    Format: Operational focus suitable for system administrators and DevOps teams.
+
+sql_analysis:
+  context: "Analyzing SQL files for database operations understanding"
+  prompt: |
+    Analyze this SQL file: {filename}
+    
+    Content:
+    {content}
+
+    Provide a comprehensive analysis in English (maximum 180 words) covering:
+    
+    **Database Operations:**
+    - Type of SQL operations (DDL, DML, DCL, TCL)
+    - Primary purpose and business function
+    
+    **Data Interactions:**
+    - Tables and views accessed
+    - Relationships and joins identified
+    - Data transformation logic
+    
+    **COBOL Integration:**
+    - How this SQL relates to COBOL programs
+    - Embedded SQL vs. external script usage
+    - Data flow between SQL and COBOL components
+    
+    **Performance Considerations:**
+    - Query complexity assessment
+    - Indexing implications
+    - Potential optimization opportunities
+    
+    **Architecture Notes:**
+    - Database design patterns observed
+    - Integration with broader system architecture
+    
+    Format: Database-focused analysis suitable for DBAs and integration specialists.

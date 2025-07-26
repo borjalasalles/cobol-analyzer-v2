@@ -1,0 +1,28 @@
+# Core dependencies
+fastapi==0.115.0
+uvicorn[standard]==0.32.0
+langgraph==0.2.34
+langchain==0.3.7
+langchain-anthropic==0.2.4
+anthropic==0.40.0
+
+# Data models and validation
+pydantic==2.10.2
+pydantic-settings==2.7.0
+
+# File and web handling
+python-multipart==0.0.12
+aiofiles==24.1.0
+requests==2.32.4
+
+# Configuration and utilities
+python-dotenv==1.0.1
+typing-extensions==4.12.2
+click==8.2.1
+
+# YAML support for external prompts
+PyYAML==6.0.1
+
+# Testing
+pytest==7.4.0
+pytest-asyncio==0.21.0

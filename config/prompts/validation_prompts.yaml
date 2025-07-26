@@ -1,0 +1,65 @@
+# ====================================================================
+# Quality Assurance Prompts
+# ====================================================================
+# These prompts help validate and improve the quality of AI-generated analyses.
+
+analysis_quality_check:
+  context: "Validate the quality and accuracy of file analysis results"
+  prompt: |
+    Review this COBOL file analysis for quality and accuracy:
+
+    Original file: {filename}
+    Analysis to validate: {analysis}
+
+    Evaluate the analysis on these criteria:
+
+    **Technical Accuracy:**
+    - Are technical terms used correctly?
+    - Are COBOL concepts properly identified?
+    - Are any technical errors present?
+
+    **Completeness:**
+    - Does it cover the main aspects of the file?
+    - Are important details missing?
+    - Is the scope appropriate for the file type?
+
+    **Clarity and Usefulness:**
+    - Is the explanation clear and well-structured?
+    - Would this be useful to someone trying to understand the file?
+    - Is the language appropriate for the intended audience?
+
+    Provide:
+    1. Overall quality score (1-10)
+    2. Specific strengths identified
+    3. Areas for improvement
+    4. Revised analysis if significant issues found
+
+summary_coherence_check:
+  context: "Validate repository summary coherence and usefulness"
+  prompt: |
+    Review this repository summary for coherence and business value:
+
+    Summary to validate: {summary}
+
+    Evaluate on these dimensions:
+
+    **Logical Consistency:**
+    - Do the conclusions follow from the evidence?
+    - Are there any contradictions or inconsistencies?
+    - Is the narrative coherent throughout?
+
+    **Business Relevance:**
+    - Are the business insights actionable?
+    - Is the technical detail appropriate for the audience?
+    - Are recommendations practical and well-prioritized?
+
+    **Completeness and Balance:**
+    - Are all major aspects covered adequately?
+    - Is there good balance between business and technical content?
+    - Are both opportunities and risks addressed?
+
+    Provide feedback on:
+    1. Overall effectiveness (1-10)
+    2. Most valuable insights identified
+    3. Gaps or weaknesses to address
+    4. Suggestions for improvement
